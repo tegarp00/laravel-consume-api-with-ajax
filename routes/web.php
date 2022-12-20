@@ -42,6 +42,12 @@ Route::get("/usejeq/products/{id}", function () {
   return view("produk.show");
 })->name('detail');
 
+// blog
+Route::get("/belog", function () {
+  return view("belog.home");
+})->name('home');
+
+// =================================================================
 
 Route::get('/', function () {
         $produk = TableProduct::paginate(10);
